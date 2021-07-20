@@ -1,0 +1,66 @@
+inherited FormFiltroPai1: TFormFiltroPai1
+  Caption = 'FormFiltroPai1'
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid [1]
+    Left = 0
+    Top = 89
+    Width = 841
+    Height = 257
+    Align = alClient
+    DataSource = dsFiltro
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  inherited fdQryFiltro: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM FORNECEDOR')
+    object fdQryFiltroID_FORNECEDOR: TIntegerField
+      FieldName = 'ID_FORNECEDOR'
+      Origin = 'ID_FORNECEDOR'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object fdQryFiltroRAZAO_SOCIAL: TWideStringField
+      FieldName = 'RAZAO_SOCIAL'
+      Origin = 'RAZAO_SOCIAL'
+      Size = 80
+    end
+    object fdQryFiltroFANTASIA: TWideStringField
+      FieldName = 'FANTASIA'
+      Origin = 'FANTASIA'
+      Size = 80
+    end
+    object fdQryFiltroCNPJ: TWideStringField
+      FieldName = 'CNPJ'
+      Origin = 'CNPJ'
+    end
+    object fdQryFiltroENDERECO: TWideStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Size = 255
+    end
+    object fdQryFiltroBAIRRO: TWideStringField
+      FieldName = 'BAIRRO'
+      Origin = 'BAIRRO'
+      Size = 50
+    end
+    object fdQryFiltroID_CIDADE: TIntegerField
+      FieldName = 'ID_CIDADE'
+      Origin = 'ID_CIDADE'
+    end
+    object fdQryFiltroID_ESTADO: TIntegerField
+      FieldName = 'ID_ESTADO'
+      Origin = 'ID_ESTADO'
+    end
+    object fdQryFiltroEMAIL: TWideStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 255
+    end
+  end
+end
